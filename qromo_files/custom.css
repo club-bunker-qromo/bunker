@@ -1,0 +1,91 @@
+hr {
+	margin: 50px;
+}
+
+
+body {
+  background: #181818;
+}
+
+.holder {
+  position: relative;
+  height: 10px;
+  width: 20px;
+  margin: 10px;
+  border-radius: 5px;
+  background: #bdc3c7;
+  transition: 0.15s background ease-out;
+}
+
+.toggle {
+  position: absolute;
+  top: -1px;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  background: #ecf0f1;
+  box-shadow: 0 px 2px 0 rgba(0, 0, 0, 0.25);
+}
+
+@keyframes toggleOn {
+  0% {
+    height: 12px;
+    left: -1px;
+    top: -1px;
+    border-radius: 6px;
+    background: #ecf0f1;
+  }
+  15% {
+    height: 10px;
+    left: 4px;
+    top: px;
+    border-radius: 10px;
+  }
+  100% {
+    height: 12px;
+    left: 9px;
+    top: -1px;
+    border-radius: 6px;
+    background: #2ecc71;
+  }
+}
+@keyframes toggleOff {
+  0% {
+    height: 12px;
+    left: 9px;
+    top: -1px;
+    border-radius: 6px;
+    background: #2ecc71;
+  }
+  15% {
+    height: 10px;
+    left: 4px;
+    top: px;
+    border-radius: 10px;
+  }
+  100% {
+    height: 12px;
+    left: -1px;
+    top: -1px;
+    border-radius: 6px;
+    background: #ecf0f1;
+  }
+}
+.off {
+  background: #bdc3c7;
+}
+
+.on {
+  background: #27ae60;
+}
+
+.on .toggle {
+  animation: toggleOn 0.15s ease-out;
+  left: 9px;
+  background: #2ecc71;
+}
+
+.off .toggle {
+  animation: toggleOff 0.15s ease-out;
+  left: -1px;
+}
